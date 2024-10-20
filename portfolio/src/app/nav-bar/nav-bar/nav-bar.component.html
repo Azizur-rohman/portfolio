@@ -1,0 +1,76 @@
+<nav class="navbar" [ngClass]="{ 'hidden': isNavbarHidden }">
+    <div class="logo">
+      <a href="#"><b style="color: blue; margin-top: -3px;">&lt;</b>
+        <div class="b1text">
+            <h2 class="h2">PORTFOLIO</h2>
+            <h2 class="h2">PORTFOLIO</h2>
+        </div>
+        <b style="color: blue; margin-top: -3px;">/&gt;</b></a>
+    </div>
+    <ul class="nav-links">
+      <li><a class="active nav-item">Start</a></li>
+      <li><a href="#section2" class="nav-item">Work</a></li>
+      <li><a href="#" class="nav-item">Lab</a></li>
+      <li><a href="#" class="nav-item">About</a></li>
+      <li><a href="#" class="nav-item">Contact</a></li>
+    </ul>
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</nav>
+<body>
+    <div class="main-body">
+        <div class="part-1" id="section1">
+            <div class="lines">
+                <div class="circle"></div>
+                <div class="vertical-line"></div>
+                <div class="mouse">
+                    <div class="mouse-icon">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="elements">
+                <div style="color: gray;">Start /&gt;</div>
+                <div style="font-size: 3rem; color: white; font-weight: bold; margin-top: 25px;"> Hi, my name is <b style="color: blue;">MD. AZIZUR ROHMAN</b> </div>
+                <div style="font-size: 3rem; color: white; font-weight: bold; margin-top: 20px;"> i <b style="font-style: italic; font-weight: normal;">design</b> and develop 
+                    <b class="auto-text"> 
+                        <span *ngFor="let letter of displayedWord; let i = index"
+                        [ngClass]="{ 'flashing': flashIndex === i, 'letter': letter !== ' ', 'space': letter === ' ' }">
+                            {{ letter }}
+                        </span>
+                    </b> 
+                </div>
+                <div style="font-size: 1.5rem; color: gray; margin-top: 35px;">Let me show You...</div>
+            </div>
+        </div>
+
+        <div class="part-2">
+            <div class="lines">
+                <div class="vertical-line"></div>
+                <div class="scroll-text">
+                    SCROLL
+                </div>
+            </div>
+        </div>
+
+        <div class="part-3">
+            <div class="lines">
+                <div class="vertical-line"></div>
+            </div>
+        </div>
+
+        <div class="part-4" id="section2">
+            <div class="lines">
+                <div class="circle"></div>
+                <div class="vertical-line"></div>
+            </div>
+            <div class="elements">
+                <div style="color: gray;">Work /&gt;</div>
+                <div style="font-size: 2rem; color: gray; margin-top: 10px; font-weight: bold;">Selected web development projects...</div>
+            </div>
+        </div>
+    </div>
+</body>

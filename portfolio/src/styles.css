@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+/* General Body Styling */
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    overflow-x: hidden;
+  } */
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('src/assets/background-9.png'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    cursor: none;
+}
+
+@media (max-width: 768px) {
+  body {
+      background-image: url('src/assets/background-9.png'); /* Use a smaller image for mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+      background-image: url('src/assets/background-9.png'); /* Use a larger image for desktops */
+  }
+}
+
+.cursor {
+  position: absolute;
+  width: 6px; /* Size of the dot */
+  height: 6px; /* Size of the dot */
+  background-color: lightcyan; /* Dot color */
+  border-radius: 50%; /* Make it circular */
+  pointer-events: none; /* Ignore mouse events */
+  z-index: 100000; /* Keep it on top */
+  transition: transform 0.1s ease, background-color 0.3s ease; /* Smooth movement */
+}
+
+.mouseCircle {
+  position: absolute;
+  width: 20px; /* Diameter of the circle */
+  height: 20px; /* Diameter of the circle */
+  border: 2px solid lightcyan; /* Circle color */
+  border-radius: 50%; /* Make it circular */
+  pointer-events: none; /* Ignore mouse events */
+  transform: translate(-50%, -50%); /* Center the circle */
+  z-index: 999999; /* Keep it behind the dot */
+  transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth movement for the circle */
+}
